@@ -78,7 +78,7 @@ POST /api/auth/logout
 // No body required
 
 # Create Note
-POST /api/v1/notes
+POST /api/notes
 Headers:
 Authorization: Bearer <your_token>
 
@@ -89,7 +89,7 @@ Body:
 }
 
 # Get Notes
-GET /api/v1/notes
+GET /api/notes
 Headers:
 Authorization: Bearer <token>
 
