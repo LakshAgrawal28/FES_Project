@@ -44,7 +44,7 @@ Authorization: Bearer <your_token>
 
 **Clone the project**
 ```bash
-git clone https://github.com/your-username/jwt-notes-api.git
+git clone https://github.com/LakshAgrawal28/FES_Project.git
 cd jwt-notes-api
 ```
 **Install dependencies**
