@@ -1,6 +1,6 @@
 import express from 'express';
 import cors from 'cors';
-import { connectDB } from './db/index.js';
+
 import authRoutes from './routes/auth.routes.js';
 import notesRoutes from './routes/notes.routes.js';
 
