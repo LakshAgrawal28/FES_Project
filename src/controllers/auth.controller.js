@@ -3,19 +3,19 @@ import { User } from '../models/user.model.js';
 import { generateAccessToken, generateRefreshToken } from '../utils/jwt.util.js';
 
 export const registerUser = async (req, res) => {
-  const { username, email, password } = req.body;
-  const existingUser = await User.findOne({ email });
-  if (existingUser) return res.status(400).json({ message: 'User already exists' });
+    const { username, email, password } = req.body;
+    const existingUser = await User.findOne({ email });
+    if (existingUser) return res.status(400).json({ message: 'User already exists' });
 
-  const hashedPassword = await bcrypt.hash(password, 10);
-  const user = await User.create({ username, email, password: hashedPassword });
+    const hashedPassword = await bcrypt.hash(password, 10);
+    const user = await User.create({ username, email, password: hashedPassword });
 
-  const accessToken = generateAccessToken(user);
-  const refreshToken = generateRefreshToken(user);
-  user.refreshToken = refreshToken;
-  await user.save();
+    const accessToken = generateAccessToken(user);
+    const refreshToken = generateRefreshToken(user);
+    user.refreshToken = refreshToken;
+    await user.save();
 
-  res.status(201).json({ accessToken, refreshToken });
+    res.status(201).json({ accessToken, refreshToken });
 };
 
 export const loginUser = async (req, res) => {
