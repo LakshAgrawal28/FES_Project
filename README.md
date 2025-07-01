@@ -59,6 +59,8 @@ Server will run at: http://localhost:8000
 
 ## Sample Postman Request flows
 
+### Make sure to include Headers: { Content-Type: application/json }
+
 # Register
 POST /api/auth/register
 {
