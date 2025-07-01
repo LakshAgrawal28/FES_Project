@@ -99,3 +99,4 @@ Authorization: Bearer <token>
 PORT=8000
 MONGODB_URI=mongodb+srv://laksh:PASSWORD@laksh.0bbkpbb.mongodb.net
 JWT_SECRET=your_jwt_secret_key
+REFRESH_TOKEN_SECRET=your_refresh_token
