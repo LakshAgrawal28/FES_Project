@@ -98,6 +98,6 @@ Authorization: Bearer <token>
 ## .env file details
 
 PORT=8000
-MONGODB_URI=mongodb+srv://laksh:PASSWORD@laksh.0bbkpbb.mongodb.net
+MONGODB_URI=___
 JWT_SECRET=your_jwt_secret_key
 REFRESH_TOKEN_SECRET=your_refresh_token
